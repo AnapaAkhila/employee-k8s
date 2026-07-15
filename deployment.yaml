@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: employee-backend
+
+  template:
+    metadata:
+      labels:
+        app: employee-backend
+
+    spec:
+      containers:
+      - name: employee-backend
+        image: 621533607727.dkr.ecr.us-east-1.amazonaws.com/employee:v1
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 3000
