@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: employee-backend
-          image: 621533607727.dkr.ecr.us-east-1.amazonaws.com/employee:v1
+          image: 621533607727.dkr.ecr.us-east-1.amazonaws.com/employee:d7027dd
           imagePullPolicy: Always
 
           ports:
